@@ -10,7 +10,7 @@ import javax.sql.DataSource;
 public class Conexion {
 
     // con el fin de que spring inyecte la dependencia
-    @Bean
+   /* @Bean
     public DataSource dataSource(){
         DataSourceBuilder dataSourceBuilder = DataSourceBuilder.create();
         dataSourceBuilder.driverClassName("org.mariadb.jdbc.Driver");
@@ -18,5 +18,5 @@ public class Conexion {
         dataSourceBuilder.username("root");
         dataSourceBuilder.password("");
         return dataSourceBuilder.build();
-    }
+    }*/
 }
