@@ -20,5 +20,7 @@ public interface Crud {
      * */
     public void getQueryWhitQueryMethods(String nombre);
 
+    public void getQueryinByEmailAndName(String email, String name);
+
 
 }

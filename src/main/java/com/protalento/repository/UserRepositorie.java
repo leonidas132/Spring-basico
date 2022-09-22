@@ -22,8 +22,11 @@ public interface UserRepositorie extends JpaRepository<User,Long> {
     @Query("SELECT u FROM User u WHERE u.id= ?1")
     Optional<User>findByUserById(long id);
 
-    @Override
-    void delete(User entity);
 
-    List<User> findByName(String name);
+    @Override
+    void delete(User entity); //query method
+
+    List<User> findByName(String name);// query method
+
+    Optional<User> findByEmailAndName(String email, String name);
 }

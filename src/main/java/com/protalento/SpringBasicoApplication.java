@@ -79,6 +79,7 @@ public class SpringBasicoApplication implements CommandLineRunner {
 		crud2.orderByName("usuario");
         crud2.getQueryById(3);
 		crud2.getQueryWhitQueryMethods("usuario");
+		crud2.getQueryinByEmailAndName("maranata1@gmail.com","maranata1");
 	}
 
 	private  void getSave(){

@@ -48,4 +48,9 @@ public class UserImplementacion implements Crud{
     public void getQueryWhitQueryMethods(String nombre) {
         userRepositorie.findByName(nombre).stream().forEach(user1 -> LOGGER.info("QUERYING WHIT QUERY METHODS: "+ user1));
     }
+
+    @Override
+    public void getQueryinByEmailAndName(String email, String name) {
+       LOGGER.info("CONSULTA CORREO Y CLAVE: "+ userRepositorie.findByEmailAndName(email,name)); ;
+    }
 }
