@@ -23,7 +23,7 @@ public class User {
 
     private LocalDate birthday;
 
-    @OneToMany(mappedBy = "user")
+    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     @JsonManagedReference//Anotación utilizada para indicar que la propiedad anotada forma parte de un vínculo bidireccional entre campos
     private List<Post> posts = new ArrayList<>();
 
