@@ -6,6 +6,8 @@ import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.springframework.data.domain.Sort;
 
+import java.time.LocalDate;
+
 public class UserImplementacion implements Crud{
     private final Log LOGGER = LogFactory.getLog(UserImplementacion.class);
     private  UserRepositorie userRepositorie;
@@ -53,4 +55,21 @@ public class UserImplementacion implements Crud{
     public void getQueryinByEmailAndName(String email, String name) {
        LOGGER.info("CONSULTA CORREO Y CLAVE: "+ userRepositorie.findByEmailAndName(email,name)); ;
     }
+
+
+    @Override
+    public void getQueryinWhitLike(String name) {
+        userRepositorie.findByNameLike(name).stream().forEach(us -> LOGGER.info("QUERYIN NAME BY CARACTER USING THE OPERATOR lIKE:"  + us  ));
+    }
+
+    @Override
+    public void getQueryNameOrEmail(String name, String email) {
+        userRepositorie.findByNameOrEmail(null,email).stream().forEach(usuario -> LOGGER.info("QUERYIN NAME BY CARACTER USING THE OPERATOR OR:" +usuario));
+    }
+
+    @Override
+    public void getQueryByDate(LocalDate begin, LocalDate end) {
+
+    }
+
 }

@@ -3,6 +3,7 @@ package com.protalento.repository;
 import com.protalento.entidad.User;
 
 import javax.persistence.Entity;
+import java.time.LocalDate;
 
 public interface Crud {
     public void consultando(String correo);
@@ -22,5 +23,10 @@ public interface Crud {
 
     public void getQueryinByEmailAndName(String email, String name);
 
+    public void getQueryinWhitLike(String name);
+
+    public void getQueryNameOrEmail(String name, String email);
+
+    public void getQueryByDate(LocalDate begin ,LocalDate end);
 
 }
