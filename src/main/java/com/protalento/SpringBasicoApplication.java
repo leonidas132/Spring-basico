@@ -86,8 +86,8 @@ public class SpringBasicoApplication implements CommandLineRunner {
 	//	crud2.getQueryinWhitLike("%m%");
 	//	crud2.getQueryNameOrEmail(null,"user1@gmail.com");
 	//	userRepositorie.findByNameLikeOrderByIdDesc("maranata").stream().forEach(user -> LOGGER.info("USUARIOS ENCONTRADOS Y ORDENADOS: "+ user));
-        LOGGER.info("USER QUERYING WHIT NAMED PARAMETERS: "+userRepositorie.getAllByBirthdayAndEmail( LocalDate.of(2005,06,02),"maranata@gmail.com"));
-		saveWhitTransactional();
+     //   LOGGER.info("USER QUERYING WHIT NAMED PARAMETERS: "+userRepositorie.getAllByBirthdayAndEmail( LocalDate.of(2005,06,02),"maranata@gmail.com"));
+	//	saveWhitTransactional();
 	}
 
 	private void saveWhitTransactional(){
@@ -95,7 +95,7 @@ public class SpringBasicoApplication implements CommandLineRunner {
 		User user = new User("usuarioText1",  "userText1@gmail.com", LocalDate.now()); //el metodo of nos permite pasar un año, mes y dia
 		User user2 = new User("usuarioText12","userText2@gmail.com", LocalDate.now());
 		User user3 = new User("usuariText3",  "userText3@gmail.com", LocalDate.now());
-		User user4 = new User("usuarioText4", "userText3@gmail.com", LocalDate.now());
+		User user4 = new User("usuarioText4", "userText4@gmail.com", LocalDate.now());
 		User user5 = new User("maranatText5", "userText5@gmail.com", LocalDate.now());
 		User user6 = new User("maranatText6", "userText6@gmail.com", LocalDate.now());
         List<User> users = Arrays.asList(user,user2,user3,user4,user5,user6);
@@ -104,7 +104,7 @@ public class SpringBasicoApplication implements CommandLineRunner {
 		}catch (Exception e){
 			LOGGER.error("controlando la exception "+ e);
 		}
-		userService.getAllUsers().stream().forEach(use -> LOGGER.info("USARIO REGISTRADOS: "+use));
+	//	userService.getAllUsers().stream().forEach(use -> LOGGER.info("USARIO REGISTRADOS: "+use));
 	}
 	private  void getSave(){
 		User user = new User("usuario","user1@gmail.com", LocalDate.of(2000,10,20)); //el metodo of nos permite pasar un año, mes y dia
