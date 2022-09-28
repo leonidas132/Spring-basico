@@ -8,10 +8,10 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 @Controller
 public class TextController {
-    @RequestMapping //anotacion que nos permite resibir todas las peticiones http
+    @RequestMapping ("")//anotacion que nos permite resibir todas las peticiones http
     @ResponseBody // nos permite reponder un cuerpo a nivel de servicios
     public ResponseEntity<String> funcion(){
-        return new ResponseEntity<>("hola mundo con un cambio ", HttpStatus.OK);
+        return new ResponseEntity<>("hola mundo con REST controller", HttpStatus.OK);
     }
 
 }

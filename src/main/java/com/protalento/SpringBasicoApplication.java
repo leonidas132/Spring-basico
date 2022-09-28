@@ -76,7 +76,7 @@ public class SpringBasicoApplication implements CommandLineRunner {
 
 	@Override
 	public void run(String... args)  {
-		getSave();
+	//	getSave();
 		//crud2.consultando("user1@gmail.com");
 	//	crud2.consultando("user1@gmail.com");
 	//	crud2.orderByName("usuario");
