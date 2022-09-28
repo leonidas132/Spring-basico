@@ -43,9 +43,8 @@ public class configuracionProperties {
     public MiBeanConProperties funcion(){
         return new MyBeanPropertiesImplementacion(name,apellido);
     }
+
     @Bean
-
-
     public DataSource dataSource(){
         DataSourceBuilder dataSourceBuilder = DataSourceBuilder.create();
         dataSourceBuilder.driverClassName(driver);
@@ -53,7 +52,7 @@ public class configuracionProperties {
         dataSourceBuilder.username(user);
         dataSourceBuilder.password(clave);
         return dataSourceBuilder.build();
-    }
+   }
 
 
 }
